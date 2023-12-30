@@ -1,0 +1,23 @@
+{
+  "name": "foodorderingwebsite",
+  "version": "1.0.0",
+  "description": "This is a crazy food Ordering Website",
+  "main": "App.js",
+  "scripts": {
+    "start": "npx parcel index.html"
+  },
+  "keywords": [
+    "swiggy-clone",
+    "food-ordering-website"
+  ],
+  "author": "Soniya Prasad",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

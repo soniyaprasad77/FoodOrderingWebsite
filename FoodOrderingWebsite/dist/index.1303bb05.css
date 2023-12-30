@@ -1,0 +1,50 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+}
+
+.nav-items > ul > li:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+.search {
+  margin: 10px;
+}
+
+.res-card {
+  text-align: center;
+  background-color: beige;
+  width: 280px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.res-card:hover {
+  border: 1px solid #000;
+}
+
+.res-logo {
+  width: 100%;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */
