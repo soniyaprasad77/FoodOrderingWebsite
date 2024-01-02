@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "src/index.html",
+      "use": "@vercel/node"
+    }
+  ]
+}

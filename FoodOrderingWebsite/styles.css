@@ -1,0 +1,42 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width:100px;
+}
+.nav-items > ul {
+    display:flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    margin: 10px;
+}
+.nav-items > ul > li:hover {
+    cursor: pointer;
+    background-color:grey;
+}
+.search{
+    margin:10px;
+}
+.res-card{
+    margin:5px;
+    padding:10px;
+    width:280px;
+    background-color: beige;
+    text-align: center;
+}
+.res-card:hover{
+    border: 1px solid black;
+
+}
+.res-logo{
+    width:100%;
+}
+.res-container{
+    display:flex;
+    flex-wrap:wrap;
+}
+
