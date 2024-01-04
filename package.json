@@ -16,5 +16,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniyaprasad77/Food_Ordering_Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soniyaprasad77/Food_Ordering_Website/issues"
+  },
+  "homepage": "https://github.com/soniyaprasad77/Food_Ordering_Website#readme"
 }
