@@ -30,6 +30,9 @@ const RestaurantInfo = () => {
     visibility,
   } = resInfo?.cards[0]?.card?.card?.info.availability;
 
+  const {itemCards } = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+ 
+  
   return (
     <div>
       <h1>{name}</h1>
@@ -40,6 +43,12 @@ const RestaurantInfo = () => {
       <h3>{nextOpenTimeMessage}</h3>
       <h3>{restaurantClosedMeta.visibility}</h3>
       <h3>{visibility}</h3>
+      <h4>Menu : </h4>
+      <h6>{itemCards.map((item)=>(
+        <li>
+          {item.card.info.name} - {item.card.info.price || item.card.info.defaultPrice}
+        </li>
+      ))}</h6>
     </div>
   );
 };
