@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard.js";
 import ShimmerUI from "./ShimmerUI.js";
 import { useEffect } from "react";
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import {
   SWIGGY_API_MOTIHARI,
   swiggy_api_bangaluru,
@@ -17,19 +18,19 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    // const data = await fetch(swiggy_api_bangaluru);
-    const data = await fetch(SWIGGY_API_MOTIHARI);
+    const data = await fetch(swiggy_api_bangaluru);
+   // const data = await fetch(SWIGGY_API_MOTIHARI);
     const jsonData = await data.json();
-    // const restaurantBangaluru =
-    //   jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-    //     ?.restaurants;
-    // setResList(restaurantBangaluru);
-    // setFilteredResList(restaurantBangaluru);
-    const restaurantMotihari =
-      jsonData?.data?.success?.cards?.[1]?.gridWidget?.gridElements
-        ?.infoWithStyle?.restaurants;
-    setResList(restaurantMotihari);
-    setFilteredResList(restaurantMotihari);
+    const restaurantBangaluru =
+      jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    setResList(restaurantBangaluru);
+    setFilteredResList(restaurantBangaluru);
+    // const restaurantMotihari =
+    //   jsonData?.data?.success?.cards?.[1]?.gridWidget?.gridElements
+    //     ?.infoWithStyle?.restaurants;
+    // setResList(restaurantMotihari);
+    // setFilteredResList(restaurantMotihari);
   };
 
   return resList.length === 0 ? (
@@ -71,7 +72,10 @@ const Body = () => {
 
       <div div className="res-container">
         {filteredResList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link
+          key={restaurant.info.id}
+          to={"/restaurants/" + restaurant.info.id
+        }><RestaurantCard  resData={restaurant} /></Link>
         ))}
       </div>
     </div>
