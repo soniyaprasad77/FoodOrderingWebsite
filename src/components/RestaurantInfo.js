@@ -45,7 +45,7 @@ const RestaurantInfo = () => {
       <h3>{visibility}</h3>
       <h4>Menu : </h4>
       <h6>{itemCards.map((item)=>(
-        <li>
+        <li key={item.card.info.id}>
           {item.card.info.name} - {item.card.info.price || item.card.info.defaultPrice}
         </li>
       ))}</h6>
