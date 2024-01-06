@@ -2,4 +2,4 @@
 
 Build using Swiggy APIs.
 
-API link: https://www.swiggy.com/mapi/homepage/getCards?lat=26.6547297&lng=84.9206098
+API link: [API - Bangalore](https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING)
