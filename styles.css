@@ -82,3 +82,16 @@
 
 /*----------------------------------------------AboutUs---------------------------------------------------------------*/
 
+.about-card{
+    width:500px;
+    border:1px solid black;
+}
+
+.about-card > img {
+    
+    height:300px;
+}
+.userCalss-about{
+    display: flex;
+    flex-wrap: wrap;
+}
