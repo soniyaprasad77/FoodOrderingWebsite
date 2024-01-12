@@ -17,9 +17,11 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(swiggy_api_bangaluru);
     const jsonData = await data.json();
+    console.log(jsonData);
     const restaurantBangaluru =
-      jsonData.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      jsonData.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
+        console.log(restaurantBangaluru)
     setResList(restaurantBangaluru);
     setFilteredResList(restaurantBangaluru);
   };
@@ -27,7 +29,7 @@ const Body = () => {
   if (onlineStatus === false)
     return <h1>You are Offline, Please check your internet connectivity</h1>;
 
-
+// console.log(resList);
   return resList.length === 0 ? (
     <ShimmerUI />
   ) : (
