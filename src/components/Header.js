@@ -1,35 +1,44 @@
 import React, { useState } from "react";
 import { LOGO_URL } from "../../utils/constants";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 const Header = () => {
-  const [btnName, setBtnName] = useState('Login')
+  const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
   return (
     <>
-      <div className="header">
-        <div className="logo-container">
-          <img
-            src={LOGO_URL}
-            alt="logo"
-            className="logo"
-          />
-          
+      <div className="header flex justify-between bg-pink-100 shadow-xl">
+        <div className="logo-container w-24">
+          <img src={LOGO_URL} alt="logo" className="logo" />
         </div>
-        <div className="company-name">
-            <h3>Hungry Hub</h3>
-          </div>
-        <div className="nav-items">
-          <ul>
-            <li>Online Status: {onlineStatus?"✔️" : "❌"}</li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">ContactUs</Link></li>
-            <li><Link to="grocery">Grocery</Link></li>
-            <button 
-            className="login-logout-btn"
-            onClick={()=>{btnName==='Login'?setBtnName("Logout"):setBtnName('Login')}}
-            >{btnName}</button>
+        <div  className=" "> 
+          <ul className="flex justify-between p-4 m-4">
+            <li className="px-6">
+              {" "}
+              Online Status: {onlineStatus ? "✔️" : "❌"}
+            </li>
+            <li className="px-6">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="px-6">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="px-6">
+              <Link to="/contact">ContactUs</Link>
+            </li>
+            <li className="px-6">
+              <Link to="grocery">Grocery</Link>
+            </li>
+            <button
+              className="login-logout-btn"
+              onClick={() => {
+                btnName === "Login"
+                  ? setBtnName("Logout")
+                  : setBtnName("Login");
+              }}
+            >
+              {btnName}
+            </button>
           </ul>
         </div>
       </div>

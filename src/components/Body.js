@@ -33,10 +33,22 @@ const Body = () => {
   return resList.length === 0 ? (
     <ShimmerUI />
   ) : (
-    <div className="body-container">
-      <div className="filter">
-        <div className="search">
+    <div className="body-container p-4 m-4 ">
+      <div className="filter flex justify-between">
+      <button
+         className="bg-red-100 px-4 rounded-lg"
+          onClick={() => {
+            const filteredList = resList.filter(
+              (res) => res.info.avgRating > 4.5
+            );
+            setResList(filteredList);
+          }}
+        >
+          Top rated Restaurants
+        </button>
+        <div>
           <input
+            className="search border border-solid border-black m-2 py-2 rounded-lg"
             type="text"
             value={searchText}
             size="70"
@@ -46,6 +58,7 @@ const Body = () => {
             }}
           ></input>
           <button
+            className="bg-red-100 px-4 py-2 rounded-lg"
             onClick={() => {
               const filteredRes = resList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -56,20 +69,9 @@ const Body = () => {
             Submit
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = resList.filter(
-              (res) => res.info.avgRating > 4.5
-            );
-            setResList(filteredList);
-          }}
-        >
-          Top rated Restaurants
-        </button>
+  
       </div>
-
-      <div div className="res-container">
+      <div div className="res-container mt-4 flex flex-wrap">
         {filteredResList.map((restaurant) => (
           <Link
             key={restaurant.info.id}
