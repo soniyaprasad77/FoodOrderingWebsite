@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { swiggy_api_bangaluru } from "../../utils/constants.js";
 import useOnlineStatus from "../../utils/useOnlineStatus.js";
+import { withVegLabel } from "./RestaurantCard.js";
 const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [resList, setResList] = useState([]);
   const [filteredResList, setFilteredResList] = useState([]);
+  const RestaurantCardWithVegLabel = withVegLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -77,7 +79,8 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+          
+          {restaurant.info.veg ? <RestaurantCardWithVegLabel resData={restaurant}/> : <RestaurantCard resData={restaurant} />}   
           </Link>
         ))}
       </div>
