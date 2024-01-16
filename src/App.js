@@ -6,7 +6,7 @@ import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error  from "./components/Error.js";
-import RestaurantInfo from "./components/RestaurantInfo.js";
+import RestaurantMenu from "./components/RestaurantMenu.js";
 import ShimmerUI from "./components/ShimmerUI.js";
 
 const Grocery = lazy(()=>import("./components/Grocery.js"));
@@ -43,7 +43,7 @@ const appRouter = createBrowserRouter([
     , 
     {
       path: 'restaurants/:resId',
-      element: <RestaurantInfo/>
+      element: <RestaurantMenu/>
     }
     , 
     {

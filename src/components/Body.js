@@ -3,7 +3,7 @@ import RestaurantCard from "./RestaurantCard.js";
 import ShimmerUI from "./ShimmerUI.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { swiggy_api_bangaluru } from "../../utils/constants.js";
+import { SWIGGY_API} from "../../utils/constants.js";
 import useOnlineStatus from "../../utils/useOnlineStatus.js";
 import { withVegLabel } from "./RestaurantCard.js";
 const Body = () => {
@@ -17,21 +17,18 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(swiggy_api_bangaluru);
+    const data = await fetch(SWIGGY_API);
     const jsonData = await data.json();
-    console.log(jsonData);
-    const restaurantBangaluru =
+    const restaurants =
       jsonData.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
-        console.log(restaurantBangaluru)
-    setResList(restaurantBangaluru);
-    setFilteredResList(restaurantBangaluru);
+    setResList(restaurants);
+    setFilteredResList(restaurants);
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
     return <h1>You are Offline, Please check your internet connectivity</h1>;
-
-// console.log(resList);
+  console.log(resList)
   return resList.length === 0 ? (
     <ShimmerUI />
   ) : (
@@ -40,10 +37,11 @@ const Body = () => {
       <button
          className="bg-red-100 px-4 rounded-lg"
           onClick={() => {
+            console.log(resList)
             const filteredList = resList.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4
             );
-            setResList(filteredList);
+            setFilteredResList(filteredList)
           }}
         >
           Top rated Restaurants
