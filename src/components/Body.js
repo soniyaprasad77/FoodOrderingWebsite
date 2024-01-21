@@ -23,12 +23,13 @@ const Body = () => {
       jsonData.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     setResList(restaurants);
+ 
     setFilteredResList(restaurants);
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
     return <h1>You are Offline, Please check your internet connectivity</h1>;
-  console.log(resList)
+  console.log(resList);
   return resList.length === 0 ? (
     <ShimmerUI />
   ) : (
