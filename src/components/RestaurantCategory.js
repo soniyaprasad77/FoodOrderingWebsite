@@ -1,11 +1,12 @@
 import RestaurantItemList from "./RestaurantItemList";
 import { useState} from "react";
 
-const RestaurantCategory = ({ data })=> {
-   const [showItems, setShowItems] = useState(false);
-   const handleClick = () =>{
-        setShowItems(!showItems);
-   }
+ // controlled component:  lifting the state up 
+const RestaurantCategory = ({ data, showItems, setShowItems })=> {
+  const handleClick =() =>{
+    setShowItems();
+  }
+  
    console.log(data);
     return (
         <div className="header">
