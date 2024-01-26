@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={{loggedInUser:userName}}>
+    <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
       <div>
         <Header />
         <Outlet />
