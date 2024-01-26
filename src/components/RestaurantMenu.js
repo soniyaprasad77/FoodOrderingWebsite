@@ -9,6 +9,7 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+  const dummy = "Dummy Data";
 
   if(resInfo===null) return <ShimmerUI/>
   const { name, costForTwo, cuisines} =
@@ -20,7 +21,7 @@ const RestaurantMenu = () => {
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-    console.log(categories)
+    
     return (
       <>
       < div className="text-center" >
@@ -33,6 +34,7 @@ const RestaurantMenu = () => {
              data={category?.card?.card}
              showItems={index===showIndex?true:false}
              setShowItems={()=>setShowIndex(index)}
+             dummy={dummy}
              />
              
             

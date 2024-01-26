@@ -1,6 +1,6 @@
 import { IMG_URL } from "../../utils/constants";
-const RestaurantItemList = ({ items }) => {
-
+const RestaurantItemList = ({ items, dummy }) => {
+console.log(dummy);
   return (
     <div>
       {items.map((item) => (
