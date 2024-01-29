@@ -1,0 +1,63 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Soniya\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add --json @parcel/transformer-css -D -W
+
+PATH: 
+  C:\Users\Soniya\OneDrive\Desktop\Namaste React\Namaste_React\HungryHub\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\Namaste React\Namaste_React\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\Namaste React\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\node_modules\.bin;C:\Users\Soniya\OneDrive\node_modules\.bin;C:\Users\Soniya\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\Soniya\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Users\Soniya\OneDrive\Desktop\Namaste React\Namaste_React\HungryHub\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\Namaste React\Namaste_React\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\Namaste React\node_modules\.bin;C:\Users\Soniya\OneDrive\Desktop\node_modules\.bin;C:\Users\Soniya\OneDrive\node_modules\.bin;C:\Users\Soniya\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\Soniya\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.0.2\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Soniya\Downloads\apache-maven-3.9.2-bin\apache-maven-3.9.2\bin;C:\Users\Soniya\apache-maven-3.9.2-bin\apache-maven-3.9.2\bin;C:\Program Files\MongoDB\Server\7.0\bin;C:\mongosh-2.1.0-win32-x64\bin;C:\Python311\Scripts\;C:\Python311\;C:\Users\Soniya\AppData\Local\Programs\Python\Launcher\;C:\Users\Soniya\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Soniya\AppData\Local\Programs\Python\Python311\;C:\Users\Soniya\AppData\Local\Microsoft\WindowsApps;C:\Users\Soniya\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.2\bin;;c:\users\soniya\appdata\local\programs\python\python311\lib\site-packages (0.38.4);C:\Users\Soniya\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Soniya\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Soniya\OneDrive\Desktop\Namaste React\Namaste_React\HungryHub\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.win32-x64-msvc.node'
+
+npm manifest: 
+  {
+    "name": "hungryhub",
+    "version": "1.0.0",
+    "description": "Food Ordering Website",
+    "main": "index.js",
+    "scripts": {
+      "start": "npx parcel index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "css": "^3.0.0",
+      "parcel": "^2.10.3",
+      "postcss": "^8.4.33",
+      "process": "^0.11.10",
+      "tailwind": "^4.0.0",
+      "tailwindcss": "^3.4.1"
+    },
+    "dependencies": {
+      "@fortawesome/fontawesome-svg-core": "^6.5.1",
+      "@fortawesome/free-solid-svg-icons": "^6.5.1",
+      "@fortawesome/react-fontawesome": "^0.2.0",
+      "@reduxjs/toolkit": "^2.1.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.1.0",
+      "react-router-dom": "^6.21.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/soniyaprasad77/Food_Ordering_Website.git"
+    },
+    "bugs": {
+      "url": "https://github.com/soniyaprasad77/Food_Ordering_Website/issues"
+    },
+    "homepage": "https://github.com/soniyaprasad77/Food_Ordering_Website#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
