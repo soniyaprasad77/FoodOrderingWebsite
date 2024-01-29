@@ -40,7 +40,9 @@ const Body = () => {
     } catch (error) {
       console.error("Error fetching data:", error.message);
       // Handle the error, e.g., show an error message to the user or set a default state.
-      setError("Restaurants are offline. Please try again later.");
+      setError(
+        "Apologies, restaurant information is currently offline. Kindly retry later."
+      );
     }
   };
 
