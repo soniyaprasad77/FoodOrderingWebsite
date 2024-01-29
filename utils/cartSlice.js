@@ -12,11 +12,17 @@ const cartSlice = createSlice({
     removeItem: (state) => {
       state.items.pop();
     },
+
+    //originalState = [{items: "pizza"}]
     clearCart: (state) => {
+      //RTK -- either mutate the existing state or return a new state
+      //mutating the state
       state.items.length = 0;
+      //returning a new state
+      //return {items:[]};  //this new [] will be replaced inside originalState = []
     },
   },
 });
 
-export const {addItem, removeItem, clearCart} = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -4,7 +4,6 @@ import RestaurantItemList from "./RestaurantItemList";
 import { clearCart } from "../../utils/cartSlice";
 
 const AddtoCart = () => {
-
   const dispatch = useDispatch();
   const handleClearCart = () => {
     dispatch(clearCart());
