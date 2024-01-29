@@ -21,6 +21,7 @@ const AddtoCart = () => {
       >
         Clear Cart
       </button>
+      {cartItems.length===0 && <h1>Your Cart is Empty. Add items to your cart.</h1>}
     </div>
   );
 };
