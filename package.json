@@ -2,9 +2,9 @@
   "name": "hungryhub",
   "version": "1.0.0",
   "description": "Food Ordering Website",
-  "main": "index.js",
+ 
   "scripts": {
-    "start": "npx parcel index.html",
+    "start": " parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
