@@ -30,7 +30,7 @@ const Body = () => {
       const restaurants =
         jsonData.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
-
+          console.log(restaurants);
       if (restaurants) {
         setResList(restaurants);
         setFilteredResList(restaurants);
@@ -49,26 +49,23 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
     return <h1>You are Offline, Please check your internet connectivity</h1>;
-  console.log(resList);
   return resList.length === 0 ? (
-    <>
-      {error ? (
-        <div
-          style={{
-            color: "red",
-            margin: "10px 0",
-            fontSize: "50px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {error}
-        </div>
-      ) : (
-        <ShimmerUI />
-      )}
-    </>
+    error ? (
+      <div
+        style={{
+          color: "red",
+          margin: "10px 0",
+          fontSize: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {error}
+      </div>
+    ) : (
+      <ShimmerUI />
+    )
   ) : (
     <>
       <div className="body-container p-4 m-4 ">
