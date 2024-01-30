@@ -2,7 +2,6 @@
   "name": "hungryhub",
   "version": "1.0.0",
   "description": "Food Ordering Website",
- 
   "scripts": {
     "start": " parcel index.html",
     "build": "parcel build index.html",
@@ -32,6 +31,7 @@
     "@parcel/watcher": "^2.4.0",
     "@reduxjs/toolkit": "^2.1.0",
     "jest": "^29.7.0",
+    "lightningcss": "^1.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
