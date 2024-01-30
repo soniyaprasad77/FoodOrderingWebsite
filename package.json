@@ -15,6 +15,7 @@
     "@testing-library/react": "^14.1.2",
     "babel-jest": "^29.7.0",
     "css": "^3.0.0",
+    "jest-environment-jsdom": "^29.7.0",
     "parcel": "^2.10.3",
     "postcss": "^8.4.33",
     "process": "^0.11.10",
