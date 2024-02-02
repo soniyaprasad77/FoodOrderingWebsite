@@ -4,9 +4,7 @@ Build using Swiggy APIs.
 
 
 Deployed at: https://food-ordering-website-delta.vercel.app/
-
-# HOME PAGE
-
+To see the deployed version : add this chrome extension [cors chrome extension](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
 
 ![Screenshot (419)](https://github.com/soniyaprasad77/Food_Ordering_Website/assets/63783532/63e00fc1-ba9a-4b2b-abab-7969c293278f)
 
