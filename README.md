@@ -23,8 +23,3 @@ To see the deployed version : add this chrome extension and turn it on [cors chr
 
 # CONTACT US
 ![Screenshot (421)](https://github.com/soniyaprasad77/Food_Ordering_Website/assets/63783532/0e22eade-0503-4051-9327-a867cfb712e2)
-
-
-# ABOUT PAGE
-
-![Screenshot (420)](https://github.com/soniyaprasad77/Food_Ordering_Website/assets/63783532/c99216e5-7745-4f97-abdb-ac4a4247b350)
